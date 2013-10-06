@@ -5,6 +5,8 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
+	protected $tableColumns = [];
+
 	/**
 	 * The database table used by the model.
 	 *
@@ -49,4 +51,22 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+	public function getColumns($tableName = null) 
+	{
+		if (!isset($this->tableColumns)) {
+			$this->tableColumns = DB::table('information_schema.columns')
+								->select('column_name')
+								->where('table_name', $tableName ?: $this->getTable())
+								->get();
+
+			foreach($this->tableColumns as $key => $value)
+			{
+				$this->tableColumns[$key] = $value->column_name;
+			}			
+
+			$this->tableColumns = array_reverse($this->tableColumns);
+		}
+
+		return $this->tableColumns;
+	}
 }

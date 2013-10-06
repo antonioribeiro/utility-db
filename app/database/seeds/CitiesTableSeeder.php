@@ -4,6 +4,10 @@ class CitiesTableSeeder extends Seeder {
 
 	public function run()
 	{
+		ini_set('memory_limit', '128M');
+        DB::table('cities')->delete();
+        DB::disableQueryLog();
+
 		$cities = array(
 						array('country_id' => 'BR', 'state_id' => 'AC', 'name' => 'Acrelândia', 'created_at' => new DateTime, 'updated_at' => new DateTime),
 						array('country_id' => 'BR', 'state_id' => 'AC', 'name' => 'Assis Brasil', 'created_at' => new DateTime, 'updated_at' => new DateTime),

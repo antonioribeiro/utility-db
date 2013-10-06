@@ -13,31 +13,31 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('CepTableSeeder');
 
-		$this->call('CountriesTableSeeder');
+		// $this->call('CountriesTableSeeder');
 		$this->call('StatesTableSeeder');
-		$this->call('CitiesTableSeeder');
-		$this->call('ProductsTableSeeder');
-		$this->call('ProductsCategoriesTableSeeder');
-		$this->call('AgeGroupsTableSeeder');
-		$this->call('BrandsTableSeeder');
-		$this->call('CategoriesTableSeeder');
-		$this->call('ColorsTableSeeder');
-		$this->call('PricesLabelsTableSeeder');
-		$this->call('SeasonsTableSeeder');
-		$this->call('SizesTableSeeder');
-		$this->call('UnitsTableSeeder');
-		$this->call('FilesTypesTableSeeder');
-		$this->call('GendersTableSeeder');
+		// $this->call('CitiesTableSeeder');
+		// $this->call('ProductsTableSeeder');
+		// $this->call('ProductsCategoriesTableSeeder');
+		// $this->call('AgeGroupsTableSeeder');
+		// $this->call('BrandsTableSeeder');
+		// $this->call('CategoriesTableSeeder');
+		// $this->call('ColorsTableSeeder');
+		// $this->call('PricesLabelsTableSeeder');
+		// $this->call('SeasonsTableSeeder');
+		// $this->call('SizesTableSeeder');
+		// $this->call('UnitsTableSeeder');
+		// $this->call('FilesTypesTableSeeder');
+		// $this->call('GendersTableSeeder');
 		
-		$this->call('PaymentServicesSeeder');
-		$this->call('PaymentServicesStatusesSeeder');
+		// $this->call('PaymentServicesSeeder');
+		// $this->call('PaymentServicesStatusesSeeder');
 
-		$this->call('SystemClassesTableSeeder');
-		$this->call('ServicesTypesTableSeeder');
-		$this->call('EnterprisesTableSeeder');
-		$this->call('ServicesTableSeeder');
+		// $this->call('SystemClassesTableSeeder');
+		// $this->call('ServicesTypesTableSeeder');
+		// $this->call('EnterprisesTableSeeder');
+		// $this->call('ServicesTableSeeder');
 
-		$this->call('ServicesStatusesTableSeeder');
+		// $this->call('ServicesStatusesTableSeeder');
 
 
 	}
